@@ -22,12 +22,35 @@
           "layers": []
         },
         "triggers": []
+      },
+      "37e13760-6f2d-49cd-a447-737fb9185a55": {
+        "id": "37e13760-6f2d-49cd-a447-737fb9185a55",
+        "parent": null,
+        "name": "AlexaPythonFunc.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "AlexaPythonFunc.py",
+        "cursor": {
+          "lineNumber": 2,
+          "column": 5
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
       }
     },
     "openFiles": [
-      "daa4083b-dbd8-46fe-bec5-fbddbcc694ea"
+      "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
+      "37e13760-6f2d-49cd-a447-737fb9185a55"
     ],
-    "currentFileId": "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
+    "currentFileId": "37e13760-6f2d-49cd-a447-737fb9185a55",
     "resources": {
       "s3btbucketimages": {
         "name": "s3btbucketimages",
@@ -97,6 +120,18 @@
           "topicDisplayName": "my topic",
           "subscriptions": []
         }
+      },
+      "snsusEast1udithTest": {
+        "name": "snsusEast1udithTest",
+        "type": "SNS",
+        "config": {
+          "topicMode": 1,
+          "topicName": "udith-test",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:udith-test",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "subscriptions": []
+        }
       }
     },
     "customTemplate": {
@@ -125,7 +160,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1585202383050
+    "lastSave": 1585203746277
   },
   "VCS_STATE": {
     "provider": "GitHub",
