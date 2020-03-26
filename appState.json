@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "AlexaTriggerTest.js",
         "cursor": {
-          "lineNumber": 5,
-          "column": 3
+          "lineNumber": 3,
+          "column": 13
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -21,7 +21,16 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [],
+        "testCases": {
+          "cbe565ae-bd2a-400a-9a37-d0c67a61e5e4": {
+            "id": "cbe565ae-bd2a-400a-9a37-d0c67a61e5e4",
+            "name": "Test event",
+            "functionId": "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
       },
       "37e13760-6f2d-49cd-a447-737fb9185a55": {
         "id": "37e13760-6f2d-49cd-a447-737fb9185a55",
@@ -52,125 +61,41 @@
     ],
     "currentFileId": "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
     "resources": {
-      "s3btbucketimages": {
-        "name": "s3btbucketimages",
-        "type": "S3",
+      "alexaSKac96613a2d424d6f922dc09c98859fdb": {
+        "name": "alexaSKac96613a2d424d6f922dc09c98859fdb",
+        "type": "ALEXA",
         "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "btbucket.images"
-          }
+          "type": 1,
+          "verifiedID": true,
+          "skillID": "amzn1.ask.skill.ac96613a-2d42-4d6f-922d-c09c98859fdb",
+          "applicationID": ""
         }
       },
-      "apigusEast1TestAPIMyLambdapost": {
-        "name": "apigusEast1TestAPIMyLambdapost",
-        "type": "API_GATEWAY",
+      "alexaSKunverified": {
+        "name": "alexaSKunverified",
+        "type": "ALEXA",
         "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "TestAPI",
-          "apiId": "0itznun7w3",
-          "endpointType": "EDGE",
-          "rootResourceId": "h2lelj6j7k",
-          "existingResources": {
-            "/MyLambda": "98nqbj",
-            "/testdbput": "bu1jy0",
-            "/": "h2lelj6j7k",
-            "/newchange/test": "k6pdhn",
-            "/newchange": "q1ox7l",
-            "/testWithSlash": "q4m4g1",
-            "/testtwospeciallambda": "q4szm3",
-            "/testtwospecialkumutest": "wey3lk"
-          },
-          "resourceMode": 1,
-          "resourcePath": "/MyLambda",
-          "resourceName": "MyLambda",
-          "resourceId": "98nqbj",
-          "restMethod": "POST",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 1,
-          "stageName": "Prod",
-          "stageDeploymentId": "9swl7o",
-          "mode": 1
+          "type": 1,
+          "verifiedID": false,
+          "skillID": "",
+          "applicationID": ""
         }
       },
-      "snsusEast1TestSNS": {
-        "name": "snsusEast1TestSNS",
-        "type": "SNS",
+      "alexaHF456yut6v2d424d6f922dc09c98859fdb": {
+        "name": "alexaHF456yut6v2d424d6f922dc09c98859fdb",
+        "type": "ALEXA",
         "config": {
-          "topicMode": 1,
-          "topicName": "TestSNS",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:TestSNS",
-          "topicRegion": "us-east-1",
-          "snsType": 0,
-          "subscriptions": []
-        }
-      },
-      "snsusEast1MYTopic": {
-        "name": "snsusEast1MYTopic",
-        "type": "SNS",
-        "config": {
-          "topicMode": 0,
-          "topicName": "MYTopic",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:MYTopic",
-          "topicRegion": "us-east-1",
-          "snsType": 0,
-          "topicDisplayName": "my topic",
-          "subscriptions": []
-        }
-      },
-      "snsusEast1udithTest": {
-        "name": "snsusEast1udithTest",
-        "type": "SNS",
-        "config": {
-          "topicMode": 1,
-          "topicName": "udith-test",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:udith-test",
-          "topicRegion": "us-east-1",
-          "snsType": 0,
-          "subscriptions": []
-        }
-      },
-      "s3as2TestLahiru": {
-        "name": "s3as2TestLahiru",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "as2-test-lahiru"
-          }
+          "type": 2,
+          "verifiedID": true,
+          "skillID": "",
+          "applicationID": "amzn1.ask.skill.456yut6v-2d42-4d6f-922d-c09c98859fdb"
         }
       }
     },
     "customTemplate": {
       "dialect": "CloudFormation",
       "definitions": {
-        "Resources": {
-          "alexaTriggerPermission": {
-            "Type": "AWS::Lambda::Permission",
-            "Properties": {
-              "Action": "lambda:InvokeFunction",
-              "Effect": "Allow",
-              "Resource": {
-                "Fn::GetAtt": [
-                  "AlexaTriggerTest",
-                  "Arn"
-                ]
-              },
-              "Principal": {
-                "Service": "alexa-appkit.amazon.com"
-              },
-              "Condition": {
-                "StringEquals": {
-                  "lambda:EventSourceToken": "amzn1.ask.skill.ac96613a-2d42-4d6f-922d-c09c98859fdb"
-                }
-              }
-            }
-          }
-        }
+        "Resources": {}
       }
     },
     "envVariables": [
@@ -184,7 +109,14 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "stripe": {
+          "name": "stripe",
+          "version": "8.36.0",
+          "dev": false,
+          "language": "nodejs"
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -195,7 +127,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1585205584054
+    "lastSave": 1585232901060
   },
   "VCS_STATE": {
     "provider": "GitHub",
