@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "AlexaTriggerTest.js",
         "cursor": {
-          "lineNumber": 3,
-          "column": 24
+          "lineNumber": 5,
+          "column": 3
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -125,7 +125,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1585202227763
+    "lastSave": 1585202383050
   },
   "VCS_STATE": {
     "provider": "GitHub",
