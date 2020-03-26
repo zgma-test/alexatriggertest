@@ -1,0 +1,79 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "daa4083b-dbd8-46fe-bec5-fbddbcc694ea": {
+        "id": "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
+        "parent": null,
+        "name": "AlexaTriggerTest.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "AlexaTriggerTest.js",
+        "cursor": {
+          "lineNumber": 2,
+          "column": 5
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "openFiles": [
+      "daa4083b-dbd8-46fe-bec5-fbddbcc694ea"
+    ],
+    "currentFileId": "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
+    "resources": {
+      "s3btbucketimages": {
+        "name": "s3btbucketimages",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "btbucket.images"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "AlexaTriggerTest",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1585200705197
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "alexatriggertest",
+      "url": "https://github.com/zgma-test/alexatriggertest"
+    }
+  }
+}
