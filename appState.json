@@ -50,7 +50,7 @@
       "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
       "37e13760-6f2d-49cd-a447-737fb9185a55"
     ],
-    "currentFileId": "37e13760-6f2d-49cd-a447-737fb9185a55",
+    "currentFileId": "daa4083b-dbd8-46fe-bec5-fbddbcc694ea",
     "resources": {
       "s3btbucketimages": {
         "name": "s3btbucketimages",
@@ -132,11 +132,46 @@
           "snsType": 0,
           "subscriptions": []
         }
+      },
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
+        }
       }
     },
     "customTemplate": {
-      "dialect": null,
-      "definitions": null
+      "dialect": "CloudFormation",
+      "definitions": {
+        "Resources": {
+          "alexaTriggerPermission": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AlexaTriggerTest",
+                  "Arn"
+                ]
+              },
+              "Principal": {
+                "Service": "alexa-appkit.amazon.com"
+              },
+              "Condition": {
+                "StringEquals": {
+                  "lambda:EventSourceToken": "amzn1.ask.skill.ac96613a-2d42-4d6f-922d-c09c98859fdb"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "envVariables": [
       {
@@ -160,7 +195,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1585203746277
+    "lastSave": 1585205584054
   },
   "VCS_STATE": {
     "provider": "GitHub",
