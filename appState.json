@@ -96,7 +96,8 @@
       "dialect": "CloudFormation",
       "definitions": {
         "Resources": {}
-      }
+      },
+      "syntax": "JSON"
     },
     "envVariables": [
       {
@@ -120,6 +121,7 @@
     }
   },
   "PROJECT_META": {
+    "sigmaVersion": "1.3.27",
     "projectName": "AlexaTriggerTest",
     "projectDescription": "",
     "projectVersion": "1.0.0",
@@ -127,7 +129,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1585232901060
+    "lastSave": 1592390440027
   },
   "VCS_STATE": {
     "provider": "GitHub",
